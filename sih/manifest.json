@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "Download Manager",
+    "version": "1.0",
+    "permissions": [
+        "downloads",
+        "downloads.open",
+        "storage",
+        "activeTab",
+        "tabs"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["images/h.png"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self';"
+    },
+    "host_permissions": [
+        "http://localhost:5000/"
+    ]
+    
+}
